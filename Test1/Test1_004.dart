@@ -20,7 +20,9 @@ class Person {
   //   this.age = age;
   // }
   // 语法糖 等价于上面的初始化函数, 用于替代实现函数重载
-  Person(this.name, this.age, {this.ID});
+  // Person(this.name, this.age, {this.ID});
+  // 构造函数重定向
+  Person(String name): this.withID(name);
 
   // 命名构造函数, 用于替代实现函数重载
   Person.withID(this.ID);
